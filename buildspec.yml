@@ -14,8 +14,8 @@ phases:
       - echo "Entered the pre_build phase..."
   build:
     commands:
-      echo "Build started on `date`"
-      composer install
+      - echo "Build started on `date`"
+      - composer install
   post_build:
     commands:
       - echo "Entered the post_build phase..."
