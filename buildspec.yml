@@ -8,7 +8,7 @@ phases:
       |
          export DEBIAN_FRONTEND=noninteractive
          apt-get update
-         apt-get install -y php php-curl php-zip php-dom php-xml php-gd
+         apt-get install -y php php-curl php-zip php-dom php-xml php-gd composer
   pre_build:
     commands:
       - echo "Entered the pre_build phase..."
