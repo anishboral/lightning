@@ -8,15 +8,13 @@ phases:
       |
          export DEBIAN_FRONTEND=noninteractive
          apt-get update
-         apt-get update
          apt-get install -y php
   pre_build:
     commands:
       - echo "Entered the pre_build phase..."
   build:
     commands:
-      - /usr/local/bin/composer install
-      - echo "Build started on `date`"
+      echo "Build started on `date`"
   post_build:
     commands:
       - echo "Entered the post_build phase..."
