@@ -41,7 +41,7 @@ phases:
       - echo "Entered the pre_build phase..."
   build:
     commands:
-      - composer install --no-progress --no-suggest
+      - composer install
       - echo "Build started on `date`"
   post_build:
     commands:
