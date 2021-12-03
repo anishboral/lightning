@@ -7,35 +7,9 @@ phases:
     commands:
       |
          export DEBIAN_FRONTEND=noninteractive
-         #Install php7.1
          apt-get update
-         apt-get install -y  software-properties-common
-         LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php
          apt-get update
-         # Install PHP
          apt-get install -y php
-                  php-ldap \
-                  php-xml \
-                  php-xmlrpc \
-                  php-zip \
-                  php-mysql \
-                  php-mbstring \
-                  php-mcrypt \
-                  php-gd \
-                  php-readline \
-                  php-opcache \
-                  php-xdebug \
-                  php-dom \
-                  php-xdebug \
-                  php-curl \
-                  unzip
-         #Enable xdebug - phpunit uses this for code coverage
-         phpenmod xdebug
-         #Install composer
-         php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-         php composer-setup.php ;
-         php -r "unlink('composer-setup.php');" ;
-         mv composer.phar /usr/local/bin/composer
   pre_build:
     commands:
       - echo "Entered the pre_build phase..."
