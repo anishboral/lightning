@@ -4,5 +4,5 @@ files:
   - source: /docroot/
     destination: /var/www/html/
   - source: /vendor/
-    destination: /var/www/
+    destination: /var/www/vendor/
 file_exists_behavior: OVERWRITE
