@@ -15,7 +15,7 @@ phases:
   build:
     commands:
       - echo "Build started on `date`"
-      - composer install -d docroot/vendor
+      - composer install -d ./docroot/vendor
   post_build:
     commands:
       - echo "Entered the post_build phase..."
